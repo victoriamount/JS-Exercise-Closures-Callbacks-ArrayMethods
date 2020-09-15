@@ -89,6 +89,7 @@ finalScore(inning, 9) might return:
 
 */ 
 
+
 function finalScore(myFunction, numInnings){
 
   let myScore = {
