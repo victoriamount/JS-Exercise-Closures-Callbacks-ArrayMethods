@@ -13,7 +13,7 @@
  * Example of usage of this higher-order function:
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
-*/
+ */
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
@@ -36,7 +36,7 @@ function processFirstItem(stringList, callback) {
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  * counter1 could be preferable in a situation where global variables are avoided. counter2 is better if we do want access to the count variable outside of the counter function.
  *
-*/
+ */
 
 // counter1 code
 function counterMaker() {
@@ -60,15 +60,17 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(){
-  return Math.floor(Math.random()*2.999);
+console.log("Task 2");
+
+function inning() {
+  return Math.floor(Math.random() * 2.999);
 }
 
 console.log(inning());
-// console.log(inning());
-// console.log(inning());
-// console.log(inning());
-// console.log(inning());
+console.log(inning());
+console.log(inning());
+console.log(inning());
+console.log(inning());
 // console.log(inning());
 // console.log(inning());
 // console.log(inning());
@@ -87,22 +89,26 @@ finalScore(inning, 9) might return:
   "Away": 5,
 }
 
-*/ 
+*/
+console.log("Task 3");
 
-
-function finalScore(myFunction, numInnings){
+function finalScore(myFunction, numInnings) {
 
   let myScore = {
     "Home": 0,
-    "Away":0
+    "Away": 0
   }
   for (let i = 0; i < numInnings; i++) {
-    myScore.Home = myScore.Home+myFunction();
-    myScore.Away = myScore.Away+myFunction();
+    myScore.Home = myScore.Home + myFunction();
+    myScore.Away = myScore.Away + myFunction();
   }
   return myScore;
 }
-
+console.log("3 innings:")
+console.log(finalScore(inning, 3));
+console.log("6 innings:")
+console.log(finalScore(inning, 6));
+console.log("9 innings:")
 console.log(finalScore(inning, 9));
 
 
@@ -128,18 +134,17 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
+console.log("Task 4");
+
 function scoreboard(finalScore, callbackInning, myInnings) {
   for (let i = 0; i < myInnings; i++) {
     if (i == 0) {
       console.log(`${i+1}st inning: ${finalScore(callbackInning, i).Away} - ${finalScore(callbackInning, i).Home}`);
-    }
-    else if (i == 1) {
+    } else if (i == 1) {
       console.log(`${i+1}nd inning: ${finalScore(inning, i).Away} - ${finalScore(inning, i).Home}`);
-    }
-    else if (i == 2) { 
+    } else if (i == 2) {
       console.log(`${i+1}rd inning: ${finalScore(inning, i).Away} - ${finalScore(inning, i).Home}`);
-    }
-    else {
+    } else {
       console.log(`${i+1}th inning: ${finalScore(inning, i).Away} - ${finalScore(inning, i).Home}`);
     }
   }

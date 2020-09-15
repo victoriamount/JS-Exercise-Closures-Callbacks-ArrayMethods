@@ -68,7 +68,7 @@ Closure is used when the parameter for the function personalDice, name, is used 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 The output will still be in the same format, but an entirely new newRoll will be generated. 
 c. What is the lexical scope of `newRoll`? 
-personalDice
+global
 
 
 ### Task 3 - Stretch Goals
