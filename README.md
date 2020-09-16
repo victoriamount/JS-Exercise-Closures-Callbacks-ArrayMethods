@@ -31,7 +31,7 @@ There are layers upon layers of nested functions within the game of baseball. Yo
 2. Clone _your_ fork (not Lambda's repo by mistake!)
 3. `cd` into your newly cloned repository
 4. Create a new branch by typing `git checkout -b <firstName-lastName>`
-5. Work on your branch, push commits and create PR as usual
+5. Work on your branch, push commits and create PR as usual X All complete
 
 ### Task 2a - MVP code
 
@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure is when a function reaches outside itself to look for a variable that isn't inside it. 
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +64,12 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure is used when the parameter for the function personalDice, name, is used in the function that generates a random number. 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The output will still be in the same format, but an entirely new newRoll will be generated. 
 c. What is the lexical scope of `newRoll`? 
+global
+
 
 ### Task 3 - Stretch Goals
 
